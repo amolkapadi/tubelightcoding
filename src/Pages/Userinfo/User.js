@@ -6,6 +6,7 @@ export default class User extends Component {
     this.state = {
       userData: [],
       search:"",
+
      
     }
   }
@@ -38,7 +39,11 @@ export default class User extends Component {
     this.setState({search:event.target.value})
   }
 
- 
+aseuser(){
+  const ase=[...this.state.userData].sort((a, b) => a.name > b.name ? 1 : -1);
+   this.setState({userData:ase}) 
+}
+
 
   render() {
     let userData = this.state.userData.filter(
@@ -86,7 +91,9 @@ export default class User extends Component {
             <thead>
               <tr>
                 <th scope="col">No</th>
-                <th scope="col">User Name</th>
+                <th scope="col">
+                   <div style={{ display: "flex", justifyContent: "space-between",alignItems: "center" }}><span> User Name</span> <button onClick={( this.aseuser.bind(this) )} className="btn btn-success ms-auto">^</button></div>
+                </th>
                 <th scope="col">User Email</th>
                 <th scope="col">User Number</th>
                 <th scope="col">User City</th>
