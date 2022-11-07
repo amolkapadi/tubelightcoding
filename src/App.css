@@ -1,38 +1,78 @@
-.App {
+.counterapp{
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  width: 300px; 
+  background-color: white;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: #76b852;
+}
+.formuser{
   text-align: center;
+  width: 30%;
+  background-color: white;
+  padding: 40px;
+    position: relative;
+    left: 50%;
+    margin-top: 250px;
+    transform: translate(-50%,-50%);
+    border-radius: 0;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.form-control{
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 13px;
+  box-sizing: border-box;
+  font-size: 14px;
 }
+.table-responsive {
+  margin-top: -150px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.btn-primary:hover{
+  background: #4CAF50;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+}
+.btn-primary{
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #4CAF50;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+
+}
+@media only screen and (max-width:600px){
+  .formuser{
+      width: 90%;
+      position: relative;
+      left: 50%;
+  top: 40%;
+  padding-bottom: 40px;
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/**navlink***/
+.navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show>.nav-link {
+  color: #76b852;
 }
